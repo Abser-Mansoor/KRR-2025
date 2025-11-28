@@ -1,0 +1,850 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2/"
+     xmlns:DP="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LaffectsTissue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LaffectsTissue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BodyPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LcausedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LcausedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BiologicalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LclosedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LclosedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Sutures"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LdressedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LdressedWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Dressing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LhasBodyPartInvolved -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LhasBodyPartInvolved">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BodyPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LhasComplicationType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LhasComplicationType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Infection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LhealsThrough -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LhealsThrough">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LinflictedByInstrument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LinflictedByInstrument">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OpenWound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#MedicalDevice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LmanagedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LmanagedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CareProvider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LmayLeadTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LmayLeadTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LrequiresCareBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LrequiresCareBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CareProvider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LtreatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LtreatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:hasBleedingDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:hasBleedingDuration">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:hasDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:hasDepth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:hasLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:hasLength">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:hasPainLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:hasPainLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DP:hasTemperature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Abrasion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Abrasion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Amputation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Amputation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Antibiotic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Antibiotic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Avulsion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Avulsion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Bandage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Bandage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#MedicalDevice"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BiologicalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BiologicalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BiologicalTissue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BiologicalTissue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BodyPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BodyPart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Bruise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Bruise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#ClosedWound"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Contusion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CareProvider -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CareProvider">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#ClosedWound -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#ClosedWound">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LhealsThrough"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Contusion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Contusion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#ClosedWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CrushInjury -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CrushInjury">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#ClosedWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Debridement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Debridement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Doctor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Doctor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CareProvider"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Dressing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Dressing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DressingMaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DressingMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#MedicalDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#FirstAidProvider -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#FirstAidProvider">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CareProvider"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Gangrene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Gangrene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Glue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Glue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Hematoma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Hematoma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#ClosedWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Hemorrhage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Hemorrhage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Hemostasis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Hemostasis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Infection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Infection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Inflammation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Inflammation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#InflammationPhase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#InflammationPhase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Irrigation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Irrigation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Laceration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Laceration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#MaturationPhase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#MaturationPhase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#MedicalDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#MedicalDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Medication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Medication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Necrosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Necrosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#NerveDamage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#NerveDamage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Nurse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Nurse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CareProvider"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OpenWound -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OpenWound">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OrganDamage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OrganDamage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Packing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Packing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Proliferation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Proliferation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#ProliferationPhase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#ProliferationPhase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Puncture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Puncture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Reattachment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Reattachment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Remodeling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Remodeling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Scar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Scar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Staples -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Staples">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#SurgicalTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#SurgicalTreatment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#SurgicalWound -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#SurgicalWound">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OpenWound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Suture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Suture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#MedicalDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Sutures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Sutures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#TetanusShot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#TetanusShot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LhealsThrough"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#LtreatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Lac1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Lac1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        <untitled-ontology-2:LclosedBy rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Sut1"/>
+        <untitled-ontology-2:LhealsThrough rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#band1"/>
+        <untitled-ontology-2:LtreatedBy rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#band1"/>
+        <DP:hasPainLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</DP:hasPainLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Sut1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Sut1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Suture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#band1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#band1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Abrasion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Avulsion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Laceration"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Puncture"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#SurgicalWound"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Amputation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Gangrene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Hemorrhage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Infection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Necrosis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#NerveDamage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OrganDamage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Scar"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Amputation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Gangrene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#NerveDamage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#OrganDamage"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Antibiotic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Bandage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Debridement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Dressing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Glue"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Irrigation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Packing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Reattachment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Staples"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Sutures"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#TetanusShot"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Bandage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#DressingMaterial"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Suture"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BiologicalEntity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CareProvider"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Complication"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#HealingProcess"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#MedicalDevice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Treatment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Wound"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BiologicalTissue"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#BodyPart"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Person"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Bruise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Contusion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#CrushInjury"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Hematoma"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Doctor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#FirstAidProvider"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Nurse"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Hemostasis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Inflammation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#InflammationPhase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#MaturationPhase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Proliferation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#ProliferationPhase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Remodeling"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Hemostasis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Inflammation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Proliferation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/fbsef/ontologies/2025/10/untitled-ontology-2#Remodeling"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
