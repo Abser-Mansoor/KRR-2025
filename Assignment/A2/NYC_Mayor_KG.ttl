@@ -1,0 +1,39 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mayor: <http://example.org/nyc/mayor/> .
+@prefix nyc: <http://example.org/nyc/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mayor:mayor_110 a nyc:Mayor ;
+    nyc:mayorNumber 110 ;
+    nyc:politicalParty "Republican" ;
+    nyc:succeededBy mayor:mayor_111 ;
+    nyc:termEnd "December 31, 2001" ;
+    nyc:termStart "January 1, 1994" ;
+    foaf:name "Rudy Giuliani" .
+
+mayor:mayor_113 a nyc:Mayor ;
+    nyc:mayorNumber 113 ;
+    nyc:politicalParty "Democratic" ;
+    nyc:precededBy mayor:mayor_112 ;
+    nyc:termEnd "Incumbent" ;
+    nyc:termStart "January 1, 2022" ;
+    foaf:name "Eric Adams" .
+
+mayor:mayor_111 a nyc:Mayor ;
+    nyc:mayorNumber 111 ;
+    nyc:politicalParty "Republican" ;
+    nyc:precededBy mayor:mayor_110 ;
+    nyc:succeededBy mayor:mayor_112 ;
+    nyc:termEnd "December 31, 2013" ;
+    nyc:termStart "January 1, 2002" ;
+    foaf:name "Michael Bloomberg" .
+
+mayor:mayor_112 a nyc:Mayor ;
+    nyc:mayorNumber 112 ;
+    nyc:politicalParty "Democratic" ;
+    nyc:precededBy mayor:mayor_111 ;
+    nyc:succeededBy mayor:mayor_113 ;
+    nyc:termEnd "December 31, 2021" ;
+    nyc:termStart "January 1, 2014" ;
+    foaf:name "Bill de Blasio" .
+
