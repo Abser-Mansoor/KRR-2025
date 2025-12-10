@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/wound-ontology#"
+     xml:base="http://www.semanticweb.org/wound-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     
+    <owl:Ontology rdf:about="http://www.semanticweb.org/wound-ontology">
+        <rdfs:comment>Wound Care and Management Ontology</rdfs:comment>
+        <rdfs:label>Wound Ontology</rdfs:label>
+    </owl:Ontology>
+
+    <!-- CLASS DEFINITIONS -->
+    
+    <!-- Biological Entity Classes -->
+    <owl:Class rdf:ID="BiologicalEntity"/>
+    
+    <owl:Class rdf:ID="Person">
+        <rdfs:subClassOf rdf:resource="#BiologicalEntity"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="BodyPart">
+        <rdfs:subClassOf rdf:resource="#BiologicalEntity"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="BiologicalTissue">
+        <rdfs:subClassOf rdf:resource="#BiologicalEntity"/>
+    </owl:Class>
+
+    <!-- Wound Classes -->
+    <owl:Class rdf:ID="Wound"/>
+    
+    <owl:Class rdf:ID="OpenWound">
+        <rdfs:subClassOf rdf:resource="#Wound"/>
+        <owl:disjointWith rdf:resource="#ClosedWound"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="ClosedWound">
+        <rdfs:subClassOf rdf:resource="#Wound"/>
+    </owl:Class>
+    
+    <!-- Open Wound Subclasses -->
+    <owl:Class rdf:ID="Abrasion">
+        <rdfs:subClassOf rdf:resource="#OpenWound"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Laceration">
+        <rdfs:subClassOf rdf:resource="#OpenWound"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Puncture">
+        <rdfs:subClassOf rdf:resource="#OpenWound"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Avulsion">
+        <rdfs:subClassOf rdf:resource="#OpenWound"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="SurgicalWound">
+        <rdfs:subClassOf rdf:resource="#OpenWound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasLocation"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#treatedWith"/>
+                <owl:someValuesFrom rdf:resource="#SurgicalTreatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#administeredBy"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- Closed Wound Subclasses -->
+    <owl:Class rdf:ID="Contusion">
+        <rdfs:subClassOf rdf:resource="#ClosedWound"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Hematoma">
+        <rdfs:subClassOf rdf:resource="#ClosedWound"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="CrushInjury">
+        <rdfs:subClassOf rdf:resource="#ClosedWound"/>
+    </owl:Class>
+
+    <!-- Treatment Classes -->
+    <owl:Class rdf:ID="Treatment"/>
+    
+    <owl:Class rdf:ID="FirstAid">
+        <rdfs:subClassOf rdf:resource="#Treatment"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Medication">
+        <rdfs:subClassOf rdf:resource="#Treatment"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="SurgicalTreatment">
+        <rdfs:subClassOf rdf:resource="#Treatment"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Dressing">
+        <rdfs:subClassOf rdf:resource="#Treatment"/>
+    </owl:Class>
+
+    <!-- Medical Device Classes -->
+    <owl:Class rdf:ID="MedicalDevice"/>
+    
+    <owl:Class rdf:ID="DressingMaterial">
+        <rdfs:subClassOf rdf:resource="#MedicalDevice"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Suture">
+        <rdfs:subClassOf rdf:resource="#MedicalDevice"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Bandage">
+        <rdfs:subClassOf rdf:resource="#MedicalDevice"/>
+    </owl:Class>
+
+    <!-- Complication Classes -->
+    <owl:Class rdf:ID="Complication"/>
+    
+    <owl:Class rdf:ID="Infection">
+        <rdfs:subClassOf rdf:resource="#Complication"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Hemorrhage">
+        <rdfs:subClassOf rdf:resource="#Complication"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Scar">
+        <rdfs:subClassOf rdf:resource="#Complication"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Necrosis">
+        <rdfs:subClassOf rdf:resource="#Complication"/>
+    </owl:Class>
+
+    <!-- Healing Process Classes -->
+    <owl:Class rdf:ID="HealingProcess"/>
+    
+    <owl:Class rdf:ID="InflammationPhase">
+        <rdfs:subClassOf rdf:resource="#HealingProcess"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="ProliferationPhase">
+        <rdfs:subClassOf rdf:resource="#HealingProcess"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="MaturationPhase">
+        <rdfs:subClassOf rdf:resource="#HealingProcess"/>
+    </owl:Class>
+
+    <!-- Care Provider Classes -->
+    <owl:Class rdf:ID="CareProvider"/>
+    
+    <owl:Class rdf:ID="Doctor">
+        <rdfs:subClassOf rdf:resource="#CareProvider"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="Nurse">
+        <rdfs:subClassOf rdf:resource="#CareProvider"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="FirstAidProvider">
+        <rdfs:subClassOf rdf:resource="#CareProvider"/>
+    </owl:Class>
+
+    <!-- Additional Supporting Classes -->
+    <owl:Class rdf:ID="InjuryMechanism"/>
+    <owl:Class rdf:ID="SeverityLevel"/>
+    
+    <owl:Class rdf:ID="AnimalBite">
+        <rdfs:subClassOf rdf:resource="#InjuryMechanism"/>
+    </owl:Class>
+    
+    <owl:Class rdf:ID="ContaminatedObject">
+        <rdfs:subClassOf rdf:resource="#InjuryMechanism"/>
+    </owl:Class>
+
+    <!-- OBJECT PROPERTIES -->
+    
+    <owl:ObjectProperty rdf:ID="hasLocation">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="#BodyPart"/>
+        <rdfs:comment>Specifies the body part where the wound is located</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="causedBy">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="#InjuryMechanism"/>
+        <rdfs:comment>Describes what caused the wound</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="treatedWith">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="#Treatment"/>
+        <rdfs:comment>Links wounds to their treatments</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="administeredBy">
+        <rdfs:domain rdf:resource="#Treatment"/>
+        <rdfs:range rdf:resource="#CareProvider"/>
+        <rdfs:comment>Specifies who administered the treatment</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="leadsTo">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="#Complication"/>
+        <rdfs:comment>Indicates potential complications from a wound</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="hasHealingStage">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="#HealingProcess"/>
+        <rdfs:comment>Current phase of wound healing</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="requiresDevice">
+        <rdfs:domain rdf:resource="#Treatment"/>
+        <rdfs:range rdf:resource="#MedicalDevice"/>
+        <rdfs:comment>Medical devices required for treatment</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="hasSeverity">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="#SeverityLevel"/>
+        <rdfs:comment>Severity assessment of the wound</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="affectsTissue">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="#BiologicalTissue"/>
+        <rdfs:comment>Specific tissues affected by the wound</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <!-- DATA PROPERTIES -->
+    
+    <owl:DatatypeProperty rdf:ID="hasLength">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:comment>Length of wound in centimeters</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:ID="hasDepth">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:comment>Depth of wound in centimeters</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:ID="hasBleedingDuration">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:comment>Bleeding time in minutes</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:ID="hasPainLevel">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:comment>Pain level on scale 1-10</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:ID="hasOnsetDate">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:comment>When the wound occurred</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:ID="hasHealingTime">
+        <rdfs:domain rdf:resource="#HealingProcess"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:comment>Expected healing time in days</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:ID="hasInfectionRisk">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:comment>Flag indicating infection risk</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:ID="requiresStitches">
+        <rdfs:domain rdf:resource="#Wound"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Whether the wound requires stitches (functional property)</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <!-- INDIVIDUALS/INSTANCES -->
+    
+    <!-- Body Parts -->
+    <BodyPart rdf:ID="Arm">
+        <rdfs:label>Arm</rdfs:label>
+    </BodyPart>
+    
+    <BodyPart rdf:ID="Leg">
+        <rdfs:label>Leg</rdfs:label>
+    </BodyPart>
+    
+    <BodyPart rdf:ID="Abdomen">
+        <rdfs:label>Abdomen</rdfs:label>
+    </BodyPart>
+    
+    <BodyPart rdf:ID="Head">
+        <rdfs:label>Head</rdfs:label>
+    </BodyPart>
+
+    <!-- Severity Levels -->
+    <SeverityLevel rdf:ID="Mild">
+        <rdfs:label>Mild</rdfs:label>
+    </SeverityLevel>
+    
+    <SeverityLevel rdf:ID="Moderate">
+        <rdfs:label>Moderate</rdfs:label>
+    </SeverityLevel>
+    
+    <SeverityLevel rdf:ID="Severe">
+        <rdfs:label>Severe</rdfs:label>
+    </SeverityLevel>
+
+    <!-- Injury Mechanisms -->
+    <InjuryMechanism rdf:ID="Fall">
+        <rdfs:label>Fall</rdfs:label>
+    </InjuryMechanism>
+    
+    <InjuryMechanism rdf:ID="SharpObject">
+        <rdfs:label>Sharp Object</rdfs:label>
+    </InjuryMechanism>
+    
+    <InjuryMechanism rdf:ID="SurgicalProcedure">
+        <rdfs:label>Surgical Procedure</rdfs:label>
+    </InjuryMechanism>
+
+    <!-- SAMPLE WOUND INSTANCES -->
+    
+    <Laceration rdf:ID="Laceration001">
+        <hasLocation rdf:resource="#Arm"/>
+        <hasLength rdf:datatype="&xsd;decimal">5.2</hasLength>
+        <hasDepth rdf:datatype="&xsd;decimal">0.8</hasDepth>
+        <hasBleedingDuration rdf:datatype="&xsd;integer">15</hasBleedingDuration>
+        <requiresStitches rdf:datatype="&xsd;boolean">true</requiresStitches>
+        <hasInfectionRisk rdf:datatype="&xsd;boolean">true</hasInfectionRisk>
+        <causedBy rdf:resource="#SharpObject"/>
+        <hasSeverity rdf:resource="#Moderate"/>
+    </Laceration>
+    
+    <SurgicalWound rdf:ID="SurgicalWound001">
+        <hasLocation rdf:resource="#Abdomen"/>
+        <hasLength rdf:datatype="&xsd;decimal">12.5</hasLength>
+        <hasDepth rdf:datatype="&xsd;decimal">1.2</hasDepth>
+        <requiresStitches rdf:datatype="&xsd;boolean">true</requiresStitches>
+        <hasInfectionRisk rdf:datatype="&xsd;boolean">true</hasInfectionRisk>
+        <causedBy rdf:resource="#SurgicalProcedure"/>
+        <hasSeverity rdf:resource="#Severe"/>
+    </SurgicalWound>
+    
+    <Abrasion rdf:ID="Abrasion001">
+        <hasLocation rdf:resource="#Leg"/>
+        <hasLength rdf:datatype="&xsd;decimal">8.0</hasLength>
+        <hasDepth rdf:datatype="&xsd;decimal">0.1</hasDepth>
+        <hasBleedingDuration rdf:datatype="&xsd;integer">3</hasBleedingDuration>
+        <requiresStitches rdf:datatype="&xsd;boolean">false</requiresStitches>
+        <hasInfectionRisk rdf:datatype="&xsd;boolean">false</hasInfectionRisk>
+        <causedBy rdf:resource="#Fall"/>
+        <hasSeverity rdf:resource="#Mild"/>
+    </Abrasion>
+
+</rdf:RDF>
