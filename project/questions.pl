@@ -13,7 +13,7 @@ next_question(CandJSON, AnsJSON, IGJSON, ResultJSON) :-
     atom_json_dict(AnsJSON, Answers, []),
     atom_json_dict(IGJSON, IGMap, []),
     (   Candidates = [] ->
-        atom_json_dict(ResultJSON, _{guess:"unknown"}, [])
+        atom_json_dict(ResultJSON, _{error:"no_candidates"}, [])
     ;   best_unasked_question(IGMap, Answers, Key) ->
         format(string(Txt), "Does the person have property '~w'?", [Key]),
         atom_json_dict(ResultJSON, _{text:Txt, key:Key}, [])
@@ -22,11 +22,10 @@ next_question(CandJSON, AnsJSON, IGJSON, ResultJSON) :-
         atom_json_dict(ResultJSON, _{guess:Name}, [])
     ).
 
-best_unasked_question(IGMap, Answers, BestKey) :-
+best_unasked_question(IGMap, _Answers, BestKey) :-
     findall(K,
-        ( get_dict(K, IGMap, _),
-          \+ get_dict(K, Answers, _),
-          \+ asked(K)
+        ( get_dict(K, IGMap, IG),
+          IG > 0.05
         ),
         Keys),
     Keys \= [],
@@ -34,8 +33,7 @@ best_unasked_question(IGMap, Answers, BestKey) :-
     findall(IG-K, (member(K, Keys), get_dict(K, IGMap, IG)), Pairs),
     keysort(Pairs, Asc),
     reverse(Asc, Desc),
-    Desc = [_IG-BestKey|_],
-    assertz(asked(BestKey)).
+    Desc = [_IG-BestKey|_].
 
 % maybe_guess(+CandidatesJSON, +IGJSON, +Threshold, -ResultJSON)
 maybe_guess(CandJSON, IGJSON, Threshold, ResultJSON) :-

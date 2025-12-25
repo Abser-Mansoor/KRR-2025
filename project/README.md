@@ -81,8 +81,12 @@ Session ended.
 - Offline filtering is simple exact/boolean matching.
 - Online mode builds a basic SPARQL; you may need to adapt predicates to real DBpedia schemas.
 
+## Online Mode Improvements
+- **Robustness**: Uses `OPTIONAL` clauses to handle missing data (e.g., Einstein's missing gender in some datasets).
+- **Speed**: Optimized SPARQL with `VALUES` clauses to prevent timeouts.
+- **Logic**: Prioritizes broad questions (Real -> Alive -> Gender) before specifics.
+- **Property Paths**: Checks multiple predicates (e.g. `dbo:field` | `dbo:academicDiscipline`) to ensure accuracy.
+
 ## Future improvements
-- Richer property mapping to actual DBpedia predicates.
-- Better natural-language question templates per property/value.
+- Richer natural-language question templates per property/value.
 - Learning step: accept a DBpedia URI on failure and persist locally.
-- More robust SPARQL query construction (e.g., occupations, genders, nationalities).

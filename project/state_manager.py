@@ -5,17 +5,17 @@ State manager: properties, initial candidates (demo/offline), and simple helpers
 from sample_data import SAMPLE_CANDIDATES
 
 
-class StateManager:
+class GameState:
     def __init__(self, mode: str = "demo"):
         self.mode = mode
-        # Define properties we might ask about
+        self.kb_path = "questions.pl"
+        # Expanded properties for 20-question depth
         self.properties = [
-            "gender",
-            "occupation",
-            "nationality",
-            "field",
-            "fictional",
-            "alive",
+            "fictional", "alive", "gender", "occupation", "field", "nationality",
+            "continent", "country", "born_in", "known_for", "notable_work", "award",
+            "education", "alma_mater", "spouse", "religion", "movement", "genre",
+            "office", "party", "notable_idea", "partner", "children",
+            "residence", "ethnicity", "period", "website"
         ]
 
     def get_initial_candidates(self):
