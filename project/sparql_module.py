@@ -214,6 +214,15 @@ class SparqlClient:
                 
                 # Skip unknown values unless strict mode
                 if cand_str == "unknown":
+                    # FIX: If the user gave a specific Positive answer (str or bool),
+                    # we must discard candidates that are "unknown" for that property.
+                    # e.g. If User says "Country=Germany", a candidate with "Country=Unknown"
+                    # should be removed, otherwise they might trigger irrelevant questions later.
+                    is_positive_constraint = isinstance(v, (str, bool))
+                    if is_positive_constraint:
+                        keep = False
+                        break
+                    
                     if strict:
                         keep = False
                         break
